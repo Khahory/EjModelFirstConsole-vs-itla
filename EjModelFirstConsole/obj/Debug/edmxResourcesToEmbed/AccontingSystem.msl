@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AccontingSystemStoreContainer" CdmEntityContainer="AccontingSystemContainer">
+    <EntitySetMapping Name="InvoiceHeaderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AccontingSystem.InvoiceHeader)">
+        <MappingFragment StoreEntitySet="InvoiceHeaderSet">
+          <ScalarProperty Name="InvoiceHeader_Id" ColumnName="InvoiceHeader_Id" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceDetailSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AccontingSystem.InvoiceDetail)">
+        <MappingFragment StoreEntitySet="InvoiceDetailSet">
+          <ScalarProperty Name="InvoiceDetail_Id" ColumnName="InvoiceDetail_Id" />
+          <ScalarProperty Name="ItemDescriptions" ColumnName="ItemDescriptions" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="InvoiceHeaderInvoiceHeader_Id" ColumnName="InvoiceHeaderInvoiceHeader_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
